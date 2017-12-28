@@ -15,9 +15,9 @@ app.use(function(req, res, next) {
 
 // https://safe-mesa-30633.herokuapp.com/api/google-places/?
 app.get('/api/google-places/*', (req, res) => {
-  let apiCall = req.url.slice('/api/google-places/'.length)
+  let apiCall = req.url.slice('/api/geocode/'.length)
   console.log(apiCall);
-  let apiReq = `https://maps.googleapis.com/maps/api/place/nearbysearch/json${apiCall}`
+  let apiReq = `https://maps.googleapis.com/maps/api/geocode/json${apiCall}`
   request.get(apiReq, (err, _, body) => {
     res.send(body)
   });

@@ -13,7 +13,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-// https://safe-mesa-30633.herokuapp.com/api/google-places/?
+// https://safe-mesa-30633.herokuapp.com/api/geocode/?
 app.get('/api/google-places/*', (req, res) => {
   let apiCall = req.url.slice('/api/geocode/'.length)
   console.log(apiCall);

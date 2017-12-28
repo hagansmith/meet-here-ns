@@ -14,10 +14,10 @@ app.use(function(req, res, next) {
 });
 
 // https://safe-mesa-30633.herokuapp.com/api/geocode/?
-app.get('/api/geocode/*', (req, res) => {
-  let apiCall = req.url.slice('/api/geocode/'.length)
+app.get('/api/directions/*', (req, res) => {
+  let apiCall = req.url.slice('/api/directions/'.length)
   console.log(apiCall);
-  let apiReq = `https://maps.googleapis.com/maps/api/geocode/json${apiCall}`
+  let apiReq = `https://maps.googleapis.com/maps/api/directions/json${apiCall}`
   request.get(apiReq, (err, _, body) => {
     res.send(body)
   });

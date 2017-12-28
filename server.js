@@ -13,7 +13,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-//https://weekend-send-train.herokuapp.com/api/google-places/?
+// https://safe-mesa-30633.herokuapp.com/api/google-places/?
 app.get('/api/google-places/*', (req, res) => {
   let apiCall = req.url.slice('/api/google-places/'.length)
   console.log(apiCall);
